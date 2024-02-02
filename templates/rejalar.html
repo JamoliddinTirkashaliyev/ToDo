@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rejalar</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <br>
+    <h1>Hamma Rejalar</h1>
+    <br>
+    <hr>
+    <br>
+    {% for reja in rejalar %}
+        {{ reja.sarlavha }}
+        <a href="/reja_ochir/{{reja.id}}"><button>O'chirish</button></a>
+        <hr>
+    {% endfor %}
+
+<form method="post">{% csrf_token %}
+    <input name="sarlavha" type="text" placeholder="Sarlavha kiriting!">
+    <input name="sana" type="date" placeholder="Sanani kiriting!">
+    <input name="malumot" type="text" placeholder="Ma'lumot kiriting!">
+    <label>Bajardi: </label>
+         <input type="checkbox" name="t">
+    <label>Mu'alliflar: </label>
+    <select name="m">
+            {% for muallif in mualliflar %}
+                <option value="{{muallif.id}}">{{ muallif.ism}}</option>
+            {% endfor %}
+    </select>
+    <button>Qoshish</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <br>
+    <h1>Hamma Mu'alliflar</h1>
+    <br>
+    <hr>
+    <br>
+    {% for muallif in muallifs %}
+        {{ muallif.ism }}, {{ muallif.kurs }}-kurs, {{muallif.yosh}} yosh
+        <a href="/muallif_ochir/{{muallif.id}}"><button>O'chirish</button></a>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>

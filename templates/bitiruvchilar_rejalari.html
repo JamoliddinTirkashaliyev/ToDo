@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bitiruvchilar_rejalari</title>
+</head>
+<body>
+<br>
+    <hr>
+    <br>
+    <h1>Bitiruvchilar Rejalari</h1>
+    <br>
+    <hr>
+    <br>
+    {% for reja in rejalar %}
+        {{ reja.sarlavha }}
+        <a href="/reja_ochir/{{reja.id}}/"><button>O'chirish</button></a>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
